@@ -1,0 +1,30 @@
+# FastAPI framework
+fastapi
+
+# ASGI server for FastAPI (for development and production)
+uvicorn[standard]
+
+# Pydantic for data validation and settings management
+pydantic[email] # Added [email] extra for EmailStr validation
+pydantic-settings # For loading settings from .env files
+
+# SQLAlchemy for ORM (connecting to PostgreSQL)
+sqlalchemy
+psycopg2-binary # PostgreSQL adapter for SQLAlchemy
+
+# Alembic for database migrations (optional but recommended with SQLAlchemy)
+alembic
+
+# Password hashing
+passlib[bcrypt]
+
+# JWT for authentication
+python-jose[cryptography]
+
+# For .env file support (handled by pydantic-settings, but good to be aware)
+# python-dotenv
+
+# Testing
+pytest
+pytest-cov # For coverage reports
+httpx # For making async HTTP requests in tests (to test FastAPI endpoints)
